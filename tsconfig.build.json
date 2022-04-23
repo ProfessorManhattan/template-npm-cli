@@ -1,0 +1,23 @@
+{
+  "exclude": [
+    ".autodoc",
+    ".cache",
+    ".common",
+    ".config",
+    ".git",
+    ".github",
+    ".gitlab",
+    ".modules",
+    ".npm",
+    ".task",
+    ".venv",
+    ".vscode",
+    "build",
+    "dist",
+    "node_modules",
+    "test",
+    "venv",
+    "**/*spec.ts"
+  ],
+  "extends": "./tsconfig.json"
+}

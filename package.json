@@ -1,31 +1,33 @@
 {
   "private": false,
-  "name": "@mblabs/npm-lib-template-npm-package",
+  "name": "@mblabs/npm-npm-cli",
   "version": "0.0.1",
-  "description": "A boilerplate for a generic NPM package",
+  "description": "A boilerplate / starting template for NPM CLI packages (using Nest Commander)",
   "license": "MIT",
   "author": "Brian Zalewski <brian@megabyte.space> (https://megabyte.space)",
   "homepage": "https://megabyte.space",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/megabyte-labs/template-npm-package.git"
+    "url": "git+https://github.com/megabyte-labs/template-npm-cli.git"
   },
   "bugs": {
     "email": "help@megabyte.space",
-    "url": "https://gitlab.com/megabyte-labs/templates/npm-package/-/issues"
+    "url": "https://gitlab.com/megabyte-labs/templates/npm-cli/-/issues"
   },
   "type": "module",
   "main": "dist/main.js",
   "module": "build/module/index.js",
+  "man": "man",
   "bin": {
-    "cli_name_here": "bin/cli"
+    "cli_name_here": "bin/cli",
+    "common-shared": "bin/cli"
   },
   "files": [
-    "dist",
-    "lib"
+    "bin/",
+    "dist/"
   ],
   "scripts": {
-    "build": "bash start.sh && task npm:build:tsconfig",
+    "build": "bash start.sh && nest build",
     "bump": "npm run build && npm version patch --no-scripts --no-commit-hooks --no-git-tag-version --force && SKIP_PREPUB=true npm publish",
     "commit": "bash start.sh && task commit",
     "fix": "bash start.sh && task fix",
@@ -48,23 +50,53 @@
   },
   "typings": "dist/main.d.ts",
   "dependencies": {
-    "tslib": "latest"
+    "@nestjs/common": "8.1.2",
+    "@nestjs/config": "^1.0.3",
+    "@nestjs/core": "8.1.2",
+    "chalk": "^4.1.2",
+    "class-transformer": "^0.4.0",
+    "class-validator": "^0.13.1",
+    "cosmiconfig": "^7.0.1",
+    "nest-commander": "^2.3.3",
+    "reflect-metadata": "^0.1.13",
+    "rxjs": "^7.2.0",
+    "shelljs": "^0.8.4",
+    "update-notifier": "^5.1.0"
   },
   "optionalDependencies": {},
   "devDependencies": {
     "@commitlint/config-conventional": "latest",
+    "@nestjs/cli": "^8.0.0",
+    "@nestjs/schematics": "^8.0.0",
+    "@nestjs/testing": "^8.0.0",
+    "@types/node": "^16.11.6",
+    "@types/shelljs": "^0.8.9",
+    "@types/update-notifier": "^5.1.0",
+    "esbuild": "^0.12.29",
+    "esbuild-node-externals": "^1.3.0",
     "eslint-config-strict-mode": "latest",
     "git-cz-emoji": "latest",
     "handlebars-helpers": "latest",
     "jest-preset-ts": "latest",
+    "nest-commander-schematics": "^2.0.1",
+    "nest-commander-testing": "^2.0.1",
     "prettier-config-sexy-mode": "latest",
+    "remark-man": "^8.0.0",
     "semantic-release-config": "latest",
+    "source-map-support": "^0.5.20",
     "typescript": "^4.5.5"
   },
   "keywords": [
+    "bin",
+    "cli",
+    "commander",
+    "cosmicconfig",
+    "inquirer",
     "library",
+    "manpage",
     "mblabs",
     "megabytelabs",
+    "nestjs",
     "professormanhattan",
     "washingtondc"
   ],
@@ -72,7 +104,7 @@
     "node": ">=14.18.0"
   },
   "publishConfig": {
-    "@gitlab:registry": "https://gitlab.com/api/v4/projects/25870520/packages/npm/",
+    "@gitlab:registry": "https://gitlab.com/api/v4/projects//packages/npm/",
     "access": "public",
     "registry": "https://registry.npmjs.org/",
     "tag": "edge"
@@ -234,6 +266,10 @@
       "unpack": "Populates production node_modules from compressed copies saved in the .modules/ folder",
       "update": "Update and refresh the repository with upstream changes and templated parts"
     }
+  },
+  "pkg": {
+    "compress": "Brotli",
+    "outputPath": "build"
   },
   "pnpm": {
     "allowedVersions": {
