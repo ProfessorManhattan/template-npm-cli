@@ -61,6 +61,7 @@
     "reflect-metadata": "^0.1.13",
     "rxjs": "^7.2.0",
     "shelljs": "^0.8.4",
+    "tslib": "latest",
     "update-notifier": "^5.1.0"
   },
   "optionalDependencies": {},
@@ -104,13 +105,16 @@
     "node": ">=14.18.0"
   },
   "publishConfig": {
-    "@gitlab:registry": "https://gitlab.com/api/v4/projects//packages/npm/",
+    "@gitlab:registry": "https://gitlab.com/api/v4/projects/35587922/packages/npm/",
     "access": "public",
     "registry": "https://registry.npmjs.org/",
     "tag": "edge"
   },
   "blueprint": {
     "description": "A boilerplate / starting template for NPM CLI packages (using Nest Commander)",
+    "github_id": "R_kgDOHOOZBw",
+    "gitlab_group_id": "11579735",
+    "gitlab_project_id": "35587922",
     "group": "npm",
     "name": "NPM CLI",
     "overview": "This repository houses the starting template / boilerplate with the format that all [Megabyte Labs](https://megabyte.space) NPM CLIs should use. It bundles together NestJS, Nest Commander, and a few other recommended dependencies. It also includes Jest for Test-Driven Development (TDD).",
@@ -120,10 +124,7 @@
     },
     "slug": "npm-cli",
     "subgroup": "cli",
-    "title": "NPM CLI Boilerplate",
-    "github_id": "R_kgDOHOOZBw",
-    "gitlab_project_id": "35587922",
-    "gitlab_group_id": "11579735"
+    "title": "NPM CLI Boilerplate"
   },
   "changelog": {
     "displayTypes": [
