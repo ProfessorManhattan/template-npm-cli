@@ -111,6 +111,7 @@
     "tag": "edge"
   },
   "blueprint": {
+    "boilerplate": true,
     "description": "A boilerplate / starting template for NPM CLI packages (using Nest Commander)",
     "github_id": "R_kgDOHOOZBw",
     "gitlab_group_id": "11579735",
