@@ -1,5 +1,4 @@
 // REFERENCE(@Question decorator examples): https://github.com/jmcdo29/nest-commander/blob/main/integration/pizza/src/pizza.question.ts
-import { Question, QuestionSet, ValidateFor } from 'nest-commander'
 
 /**
  * QuestionSet for the `task` command

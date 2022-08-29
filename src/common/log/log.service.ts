@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any, fp/no-rest-parameters, functional/functional-parameters */
-import { ConsoleLogger, Injectable, Scope } from '@nestjs/common'
+import { ConsoleLogger } from '@nestjs/common'
 import chalk from 'chalk'
 import { isUnicodeSupported } from '../common.util'
 

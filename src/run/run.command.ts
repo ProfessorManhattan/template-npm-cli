@@ -1,6 +1,5 @@
-import { Command, CommandRunner, Option } from 'nest-commander'
+import { CommandRunner } from 'nest-commander'
 import { LogService } from '../common/common'
-import { ChildCommand } from './child/child.command'
 
 /**
  * Class for the `app run <task>` command
